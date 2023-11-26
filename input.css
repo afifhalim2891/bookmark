@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hamburger {
+  top: 54px;
+  right: 40px;
+  height: 24px;
+  width: 24px;
+}
+
+.top-line,
+.middle-line,
+.bottom-line {
+  position: absolute;
+  width: 24px;
+  height: 3px;
+  background-color: #333;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transition: all 0.25s;
+}
+
+.top-line {
+  position: absolute;
+  top: 25%;
+}
+
+.bottom-line {
+  position: absolute;
+  top: 75%;
+}
+
+.open .middle-line {
+  display: none;
+}
+
+.open .top-line {
+  transform: rotate(45deg) translateY(8px);
+}
+
+.open .bottom-line {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+.bg-shape {
+  @apply bg-softBlue rounded-l-full absolute top-32;
+  width: 1000px;
+  height: 300px;
+  left: 30%;
+  z-index: -10;
+}
+
+.bg-shape-feature {
+  @apply bg-softBlue rounded-r-full absolute top-32;
+  width: 1000px;
+  height: 300px;
+  right: 30%;
+  z-index: -10;
+}
